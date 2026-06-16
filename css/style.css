@@ -1,12 +1,3 @@
-/* ============================================
-   ACHADINHOS DA ELIS - Estilos Globais
-   Cores:
-   --laranja:    #D8A672
-   --azul:       #085172
-   --amarelo:    #e2e4c1
-   --marrom:     #806f4f
-============================================ */
-
 :root {
   --laranja: #D8A672;
   --azul: #085172;
@@ -25,9 +16,7 @@ body { font-family: var(--font-corpo); color: var(--texto-escuro); background-co
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
-/* ============================================
-   BANNER TOPO
-============================================ */
+/* BANNER TOPO */
 .banner-anuncio {
   background-color: var(--azul);
   color: var(--amarelo);
@@ -48,9 +37,7 @@ img { display: block; max-width: 100%; }
   100% { transform: translateX(-100%); }
 }
 
-/* ============================================
-   HEADER / NAVBAR
-============================================ */
+/* HEADER */
 header {
   background-color: var(--branco);
   border-bottom: 2px solid var(--laranja);
@@ -194,9 +181,7 @@ header {
   margin-top: 4px;
 }
 
-/* ============================================
-   HERO
-============================================ */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, var(--azul) 0%, #0a6a9a 100%);
   color: white;
@@ -224,9 +209,7 @@ header {
   margin-bottom: 32px;
 }
 
-/* ============================================
-   BOTÕES
-============================================ */
+/* BOTÕES */
 .btn-primary {
   display: inline-block;
   background-color: var(--laranja);
@@ -259,9 +242,7 @@ header {
 }
 .btn-secundario:hover { background: var(--azul); color: white; }
 
-/* ============================================
-   SEÇÕES GERAIS
-============================================ */
+/* SEÇÕES GERAIS */
 .section-padding { padding: 56px 24px; max-width: 1200px; margin: 0 auto; }
 .section-titulo {
   font-family: var(--font-titulo);
@@ -279,9 +260,7 @@ header {
   border-radius: 2px;
 }
 
-/* ============================================
-   CATEGORIAS GRID
-============================================ */
+/* CATEGORIAS GRID */
 .categorias-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -304,9 +283,7 @@ header {
 .cat-icone { font-size: 2rem; margin-bottom: 8px; }
 .categoria-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.05em; }
 
-/* ============================================
-   PRODUTOS GRID
-============================================ */
+/* PRODUTOS GRID */
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -395,9 +372,7 @@ header {
 
 .produtos-section { background: var(--cinza-claro); }
 
-/* ============================================
-   BUSCA E FILTROS (catálogo)
-============================================ */
+/* BUSCA E FILTROS (catálogo) */
 .busca-bar {
   max-width: 500px;
   margin: 32px auto 0;
@@ -460,9 +435,7 @@ header {
   display: none;
 }
 
-/* ============================================
-   MODAL PRODUTO
-============================================ */
+/* MODAL PRODUTO */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -734,9 +707,7 @@ header {
 }
 .btn-limpar-carrinho:hover { border-color: #e74c3c; color: #e74c3c; }
 
-/* ============================================
-   MODAL LOGIN / CADASTRO
-============================================ */
+/* MODAL LOGIN / CADASTRO */
 .auth-overlay {
   display: none;
   position: fixed;
@@ -868,9 +839,7 @@ header {
 }
 .user-avatar:hover { opacity: 0.85; }
 
-/* ============================================
-   MODAL CHECKOUT
-============================================ */
+/* MODAL CHECKOUT */
 .checkout-overlay {
   display: none;
   position: fixed;
@@ -1018,9 +987,7 @@ header {
 }
 .toast.show { transform: translateY(0); opacity: 1; }
 
-/* ============================================
-   BANNER INFO
-============================================ */
+/* BANNER INFO */
 .banner-info {
   background-color: var(--laranja);
   padding: 48px 24px;
@@ -1034,9 +1001,7 @@ header {
 }
 .banner-info p { opacity: 0.95; line-height: 1.7; font-size: 1rem; max-width: 680px; margin: 0 auto; }
 
-/* ============================================
-   SOBRE
-============================================ */
+/* SOBRE */
 .sobre-hero {
   background: linear-gradient(135deg, var(--azul) 0%, #0a6a9a 100%);
   color: white;
@@ -1049,9 +1014,7 @@ header {
 .sobre-texto h2 { font-family: var(--font-titulo); font-size: 1.6rem; color: var(--azul); margin-bottom: 16px; }
 .sobre-texto p { line-height: 1.8; color: #555; margin-bottom: 20px; font-size: 0.95rem; }
 
-/* ============================================
-   FOOTER
-============================================ */
+/* FOOTER */
 footer {
   background-color: var(--azul);
   color: var(--amarelo);
@@ -1094,9 +1057,7 @@ footer {
   opacity: 0.6;
 }
 
-/* ============================================
-   RESPONSIVO
-============================================ */
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -1114,9 +1075,7 @@ footer {
   .produto-img { height: 180px; }
 }
 
-/* ============================================
-   SOBRE - VALORES (estilos restaurados)
-============================================ */
+/* SOBRE - VALORES */
 .sobre-valores {
   background-color: var(--azul);
   color: var(--branco);
