@@ -126,12 +126,23 @@ header {
   border: none;
   padding: 8px 18px;
   border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.04em;
   transition: background 0.2s;
 }
+
+.btn-login-nav img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .btn-login-nav:hover { background: var(--laranja); }
 
 /* Hamburger */
@@ -860,6 +871,13 @@ header {
   border: none;
   transition: opacity 0.2s;
 }
+
+.user-avatar img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .user-avatar:hover { opacity: 0.85; }
 
 /* MODAL CHECKOUT */
