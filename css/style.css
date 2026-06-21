@@ -299,6 +299,12 @@ header {
   transform: translateY(-3px);
 }
 .cat-icone { font-size: 2rem; margin-bottom: 8px; }
+.cat-icone img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin: 0 auto;
+}
 .categoria-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.05em; }
 
 /* .categorias-grid {
