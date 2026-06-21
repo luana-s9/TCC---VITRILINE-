@@ -213,13 +213,17 @@
       <button class="modal-fechar" id="btn-fechar-checkout">&times;</button>
       <h2>Finalizar Pedido</h2>
       <div class="checkout-secao">
-        <h4>📦 Resumo do Pedido</h4>
+        <h4>
+          <img src="icons/caixa.png" alt="Caixa" class="checkout-icone">
+          Resumo do Pedido</h4>
         <div class="checkout-resumo">
           <div id="checkout-resumo-itens"></div>
         </div>
       </div>
       <div class="checkout-secao">
-        <h4>👤 Seus Dados</h4>
+        <h4>
+          <img src="icons/user.png" alt="Usuário" class="checkout-icone">
+          Seus Dados</h4>
         <div class="checkout-form">
           <input type="text" id="checkout-nome" placeholder="Nome completo" required />
           <input type="tel" id="checkout-tel" placeholder="WhatsApp (com DDD)" required />
@@ -227,17 +231,25 @@
         </div>
       </div>
       <div class="checkout-secao">
-        <h4>💳 Forma de Pagamento</h4>
+        <h4>
+          <img src="icons/sem-contato.png" alt="Cartão" class="checkout-icone">
+          Forma de Pagamento
+        </h4>
         <div class="checkout-metodos">
           <button class="metodo-btn selecionado" data-metodo="pix">
-            <span class="metodo-icone">📱</span>PIX
+            <span class="metodo-icone">
+              <img src="icons/icons8-foto-48.png" alt="Pix" class="checkout-icone">
+            </span>PIX
           </button>
         </div>
       </div>
       <p style="font-size:0.8rem; color:#aaa; text-align:center; margin-top:8px;">
         ℹ️ Ao finalizar, você será direcionada ao WhatsApp para confirmar o pedido com a Elis.
       </p>
-      <button class="btn-finalizar" id="btn-finalizar">🛍️ Enviar Pedido pelo WhatsApp</button>
+      <button class="btn-finalizar" id="btn-finalizar">
+        <img src="icons/whatsapp.png" alt="WhatsApp" class="checkout-icone">
+        Enviar Pedido pelo WhatsApp
+      </button>
     </div>
   </div>
 

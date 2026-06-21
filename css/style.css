@@ -1170,3 +1170,12 @@ footer {
   opacity: 0.85;
   line-height: 1.6;
 }
+
+/* Ícones dos títulos do checkout */
+.checkout-icone {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+  display: inline-block;
+}
