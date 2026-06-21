@@ -1179,3 +1179,11 @@ footer {
   margin-right: 6px;
   display: inline-block;
 }
+
+/* Ícones da caixinha de destaques da página Sobre */
+.sobre-icone {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-top: 2px;
+}
