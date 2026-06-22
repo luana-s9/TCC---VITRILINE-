@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Caixa principal baseada no checkout da Elis */
+        .account-container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Título Principal */
+        .title {
+            font-size: 24px;
+            color: #1e2d4a;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        /* Cabeçalho da Seção */
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #7d8c99;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Campos de Dados Formato Checkout */
+        .data-field {
+            margin-bottom: 15px;
+        }
+
+        .data-label {
+            font-size: 11px;
+            color: #8c9ba5;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .data-value {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #fcfcfc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            color: #334155;
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 45px;
+        }
+
+        /* Botão Sair Interno e Arredondado */
+        .btn-logout {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #e5cdb2;
+            color: #5c4a37;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-logout:hover {
+            background-color: #dbbf9e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="account-container">
+        <h1 class="title">Minha Conta</h1>
+        
+        <div class="section-title">
+            👤 Seus Dados Pessoais
+        </div>
+
+        <div class="data-field">
+            <label class="data-label">Nome completo</label>
+            <div class="data-value" id="perfil-nome">Carregando...</div>
+        </div>
+
+        <div class="data-field">
+            <label class="data-label">E-mail</label>
+            <div class="data-value" id="perfil-email">Carregando...</div>
+        </div>
+
+        <div class="data-field">
+            <label class="data-label">WhatsApp (com DDD)</label>
+            <div class="data-value" id="perfil-whats">Não cadastrado</div>
+        </div>
+
+        <button class="btn-logout" id="btn-logout-modal">Sair da Conta</button>
+    </div>
+
+    <script>
+        // 1. CARREGAR OS DADOS DO USUÁRIO
+        window.addEventListener('DOMContentLoaded', () => {
+            const nomeSalvo = localStorage.getItem('usuarioNome');
+            const emailSalvo = localStorage.getItem('usuarioEmail');
+
+            const elNome = document.getElementById('perfil-nome');
+            const elEmail = document.getElementById('perfil-email');
+
+            if (elNome && nomeSalvo) elNome.textContent = nomeSalvo;
+            if (elEmail && emailSalvo) elEmail.textContent = emailSalvo;
+        });
+
+        // 2. FUNÇÃO DO BOTÃO SAIR
+       // 2. FUNÇÃO DO BOTÃO SAIR
+       // Procure por esta parte no final do script do seu conta.html e mude para:
+        const botaoSairModal = document.getElementById('btn-logout-modal');
+        if (botaoSairModal) {
+        botaoSairModal.addEventListener('click', () => {
+        // 1. Limpa ABSOLUTAMENTE TUDO que estiver salvo no navegador (nome, e-mail, tokens de login)
+        localStorage.clear();
+        sessionStorage.clear(); // Por garantia, caso use sessionStorage também
+
+        // 2. Manda de volta para a página principal limpando o estado de login
+        window.location.href = 'index.html?abrirLogin=true';
+    });
+}
+    </script>
+
+</body>
+</html>

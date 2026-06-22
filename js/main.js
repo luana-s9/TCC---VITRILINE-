@@ -619,6 +619,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const email = document.getElementById('cad-email').value;
       const senha = document.getElementById('cad-senha').value;
       if (cadastrar(nome, email, senha)) {
+        localStorage.setItem('usuarioNome', nome);
+        localStorage.setItem('usuarioEmail', email);
         fecharAuth();
         mostrarToast(`Bem-vinda, ${nome}! Conta criada com sucesso! 🎉`);
       } else {
@@ -649,3 +651,29 @@ document.addEventListener('DOMContentLoaded', () => {
       btns.forEach(btn => { if (btn.textContent === cat) btn.click(); });
     }, 50);
   }
+
+ // --- SUBSTITUA O BLOCO NO FINAL DO SEU MAIN.JS POR ESTE ---
+
+window.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    if (urlParams.get('abrirLogin') === 'true') {
+        
+        // 1. FORÇA O AVATAR A SUMIR E O BOTÃO "ENTRAR" A APARECER:
+        const btnLoginNav = document.getElementById('btn-login-nav');
+        const userWrapper = document.getElementById('user-profile-wrapper');
+        
+        if (userWrapper) userWrapper.style.display = 'none';   // Esconde o avatar do usuário conectado
+        if (btnLoginNav) btnLoginNav.style.display = 'flex';   // Mostra o botão "Entrar" original de volta
+
+        // 2. Abre a caixinha de Login/Cadastro "Achadinhos da Elis" automaticamente
+        if (typeof abrirAuth === 'function') {
+            abrirAuth(); 
+        } else {
+            const modalAuth = document.getElementById('checkout-overlay') || document.getElementById('auth-modal');
+            if (modalAuth) {
+                modalAuth.style.display = 'flex';
+            }
+        }
+    }
+});
