@@ -342,7 +342,7 @@ function criarModal() {
         <p class="modal-tamanho" id="modal-tam"></p>
         
         <button class="btn-add-cart-modal" id="modal-btn-cart">
-          <img src="icons/shopping-cart (1).png" alt="Carrinho" class="btn-comprar-icone"> Adicionar ao Carrinho
+          <img src="icons/carrinho-de-compras.png" alt="Carrinho" class="btn-comprar-icone"> Adicionar ao Carrinho
         </button>
         
         <button class="btn-fechar-modal" onclick="fecharModal()">Fechar</button>
@@ -397,7 +397,7 @@ function criarCardProduto(prod) {
         <button class="btn-ver" onclick="abrirModal(${prod.id})">Ver detalhes</button>
         
         <button class="btn-add-cart" onclick="adicionarAoCarrinho(${prod.id})">
-          <img src="icons/shopping-cart (1).png" alt="Comprar" class="btn-comprar-icone"> Comprar
+          <img src="icons/carrinho-de-compras.png" alt="Comprar" class="btn-comprar-icone"> Comprar
         </button>
         
       </div>
