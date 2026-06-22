@@ -29,18 +29,22 @@
         <li><a href="sobre.html" class="active">Sobre</a></li>
       </ul>
       <div class="nav-actions">
-        <button class="btn-carrinho" id="btn-carrinho" aria-label="Carrinho">
-          <img src="icons/carrinho-de-compras.png" alt="Carrinho">
-          <span class="carrinho-badge" id="carrinho-badge">0</span>
-        </button>
-        <button  class="btn-login-nav" id="btn-login-nav">
-          <img src="icons/avatar.png" alt="Usuário">
-          Entrar
-        </button>
-        <button class="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+    <button class="btn-carrinho" id="btn-carrinho" aria-label="Carrinho">
+        <img src="icons/shopping-cart (1).png" alt="Carrinho">
+        <span class="carrinho-badge" id="carrito-badge">0</span>
+    </button>
+    <button class="btn-login-nav" id="btn-login-nav">
+        <img src="icons/user.png" alt="Usuário">
+        <span>Entrar</span>
+    </button>
+    <div id="user-profile-wrapper" style="display: none; position: relative;">
+    <button class="user-avatar" id="user-avatar" title="Meu Perfil">
+        <img src="icons/user-logged.png" alt="Avatar do Usuário">
+    </button>
+    <button class="btn-logout" id="btn-logout" title="Sair da conta">
+        Sair
+    </button>
+</div>
     </nav>
     <nav class="mobile-menu">
       <a href="index.html">Início</a>
