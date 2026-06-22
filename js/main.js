@@ -365,7 +365,7 @@ function abrirModal(id) {
   document.getElementById('modal-nome').textContent = prod.nome;
   document.getElementById('modal-preco').textContent = prod.precoStr;
   document.getElementById('modal-desc').textContent = prod.desc;
-  document.getElementById('modal-tam').textContent = `📏 Tamanho: ${prod.tamanho}`;
+  document.getElementById('modal-tam').innerHTML = `<img src="icons/régua.png" alt="Tamanho" class="btn-comprar-icone"> Tamanho: ${prod.tamanho}`;
   document.getElementById('modal-btn-cart').onclick = () => {
     adicionarAoCarrinho(id);
     fecharModal();
@@ -392,7 +392,9 @@ function criarCardProduto(prod) {
       <p class="produto-categoria">${prod.categoria}</p>
       <h3>${prod.nome}</h3>
       <p class="produto-preco">${prod.precoStr}</p>
-      <p class="produto-tamanho">📏 ${prod.tamanho}</p>
+      <p class="produto-tamanho">
+      <img src="icons/régua.png" alt="Tamanho" class="btn-comprar-icone"> ${prod.tamanho}
+</p>
       <div class="produto-acoes">
         <button class="btn-ver" onclick="abrirModal(${prod.id})">Ver detalhes</button>
         
