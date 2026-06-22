@@ -1187,3 +1187,50 @@ footer {
   object-fit: contain;
   margin-top: 2px;
 }
+
+/* Ícones da seção Nossos Valores (Página Sobre) */
+.valor-icone-bloco {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valores-icone {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+/* CORREÇÃO DE CENTRALIZAÇÃO DOS VALORES */
+.valor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* Centraliza a imagem e os textos na horizontal */
+  text-align: center;       /* Garante o alinhamento central do texto */
+}
+
+.valor-icone-bloco {
+  width: 100%;             /* Ocupa a largura total para alinhar a imagem ao centro */
+  display: flex;
+  justify-content: center; /* Centraliza a tag img horizontalmente */
+  align-items: center;
+  margin-bottom: 12px;     /* Dá o espaço certinho para o título abaixo */
+}
+
+.valores-icone {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;          /* Remove qualquer comportamento de texto da imagem */
+}
+
+/* Ícone de imagem dentro do botão do Instagram (Página Sobre) */
+.instagram-btn-icone {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
