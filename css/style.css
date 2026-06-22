@@ -1234,3 +1234,47 @@ footer {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Alinhamento do ícone de imagem no botão Comprar do catálogo */
+.btn-add-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; 
+}
+
+.btn-comprar-icone {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* ==========================================================================
+   ATUALIZAÇÃO DE ÍCONES (VITRINE, MODAL E PÁGINA SOBRE)
+   ========================================================================== */
+
+/* Alinhamento dos botões de comprar no catálogo e no modal */
+.btn-add-cart,
+.btn-add-cart-modal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Dá um espaço perfeito entre o ícone e o texto */
+}
+
+/* Tamanho controlado para o ícone do carrinho de compras */
+.btn-comprar-icone {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+/* Tamanho controlado para o ícone do Instagram (Página Sobre) */
+.instagram-btn-icone {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
