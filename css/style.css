@@ -901,6 +901,23 @@ header {
   object-fit: contain;
 }
 
+#btn-logout {
+    background: none;
+    border: none;
+    color: #333;            
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: 8px;
+    transition: color 0.2s ease;
+}
+
+#btn-logout:hover {
+    color: #ff4d4d;    
+    text-decoration: underline;
+}
+
 .user-avatar:hover { opacity: 0.85; }
 
 /* MODAL CHECKOUT */

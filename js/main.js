@@ -222,21 +222,29 @@ function logout() {
 }
 
 function atualizarNavUsuario() {
-  const btnLogin = document.getElementById('btn-login-nav');
-  const userAvatar = document.getElementById('user-avatar');
-  if (!btnLogin) return;
+    const btnLogin = document.getElementById('btn-login-nav');
+    const userAvatar = document.getElementById('user-avatar');
+    const userProfileWrapper = document.getElementById('user-profile-wrapper'); 
 
-  if (usuarioLogado) {
-    btnLogin.style.display = 'none';
-    if (userAvatar) {
-      userAvatar.style.display = 'flex';
-      userAvatar.textContent = usuarioLogado.nome.charAt(0).toUpperCase();
-      userAvatar.title = `${usuarioLogado.nome} — Clique para sair`;
+    if (!btnLogin) return;
+
+    if (usuarioLogado) {
+        btnLogin.style.display = 'none';
+        
+        if (userProfileWrapper) {
+            userProfileWrapper.style.display = 'flex'; 
+        }
+        if (userAvatar) {
+            userAvatar.textContent = usuarioLogado.nome.charAt(0).toUpperCase();
+            userAvatar.title = `${usuarioLogado.nome} – Meu Perfil`;
+        }
+    } else {
+        btnLogin.style.display = 'flex';
+        
+        if (userProfileWrapper) {
+            userProfileWrapper.style.display = 'none';
+        }
     }
-  } else {
-    btnLogin.style.display = 'flex';
-    if (userAvatar) userAvatar.style.display = 'none';
-  }
 }
 
 function abrirAuth(aba) {
@@ -524,9 +532,7 @@ function initNavbar() {
   });
 }
 
-// ============================================
 // TOAST
-// ============================================
 function mostrarToast(msg) {
   let toast = document.getElementById('toast-global');
   if (!toast) {
@@ -541,9 +547,7 @@ function mostrarToast(msg) {
   toast._timeout = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ============================================
 // INIT
-// ============================================
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   criarModal();
@@ -564,18 +568,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCheckout = document.getElementById('btn-checkout');
   if (btnCheckout) btnCheckout.addEventListener('click', abrirCheckout);
 
-  // Auth
-  const btnLoginNav = document.getElementById('btn-login-nav');
-  if (btnLoginNav) btnLoginNav.addEventListener('click', () => abrirAuth('login'));
-  const userAvatar = document.getElementById('user-avatar');
-  if (userAvatar) userAvatar.addEventListener('click', logout);
-  const authOverlay = document.getElementById('auth-overlay');
-  if (authOverlay) authOverlay.addEventListener('click', e => { if (e.target === authOverlay) fecharAuth(); });
-  const btnFecharAuth = document.getElementById('btn-fechar-auth');
-  if (btnFecharAuth) btnFecharAuth.addEventListener('click', fecharAuth);
-  document.querySelectorAll('.auth-tab').forEach(tab => {
-    tab.addEventListener('click', () => trocarAba(tab.dataset.aba));
-  });
+    // Auth
+    const btnLoginNav = document.getElementById('btn-login-nav');
+    if (btnLoginNav) btnLoginNav.addEventListener('click', () => abrirAuth('login'));
+    const userAvatar = document.getElementById('user-avatar');
+    if (userAvatar) {
+    userAvatar.addEventListener('click', () => {
+        window.location.href = 'index.html'; 
+    });
+}
+    // NOVO:
+    const btnLogout = document.getElementById('btn-logout');
+    if (btnLogout) btnLogout.addEventListener('click', logout); 
+
+    const authOverlay = document.getElementById('auth-overlay');
+    if (authOverlay) authOverlay.addEventListener('click', e => { if (e.target === authOverlay) fecharAuth(); });
+
+    const btnFecharAuth = document.getElementById('btn-fechar-auth');
+    if (btnFecharAuth) btnFecharAuth.addEventListener('click', fecharAuth);
+
+    document.querySelectorAll('.auth-tab').forEach(tab => {
+        tab.addEventListener('click', () => trocarAba(tab.dataset.aba));
+    });
+});
 
   // Form Login
   const formLogin = document.getElementById('form-login');
@@ -632,4 +647,3 @@ document.addEventListener('DOMContentLoaded', () => {
       btns.forEach(btn => { if (btn.textContent === cat) btn.click(); });
     }, 50);
   }
-});
