@@ -1295,3 +1295,10 @@ footer {
   display: inline-block;
   vertical-align: middle;
 }
+
+.produto-tamanho {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Espaço entre o ícone da régua e o número do tamanho */
+}
+
