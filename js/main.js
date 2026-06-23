@@ -153,7 +153,9 @@ function renderizarCarrinho() {
   if (carrinho.length === 0) {
     itensEl.innerHTML = `
       <div class="carrinho-vazio">
-        <div class="icone-sacola">🛍️</div>
+        <div class="icone-sacola">
+          <img src="icons/sacolas-de-compras.png" alt="Sacola Vazia" class="carrinho-vazio-icone">
+        </div>
         <p>Seu carrinho está vazio.<br>Adicione peças que você amou!</p>
       </div>`;
     if (totalEl) totalEl.textContent = 'R$ 0,00';

@@ -1302,3 +1302,43 @@ footer {
   gap: 4px; /* Espaço entre o ícone da régua e o número do tamanho */
 }
 
+/* Centraliza tudo dentro do carrinho vazio (ícone e texto) */
+.carrinho-vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 30px 0; /* Dá um espaço legal dentro do modal */
+}
+
+/* Garante que a caixinha do ícone também mude para o centro */
+.icone-sacola {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Tamanho controlado para as sacolas de compras */
+.carrinho-vazio-icone {
+  width: 60px; 
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px; /* Empurra o texto um pouquinho para baixo */
+}
+
+/* Alinhamento dos novos ícones no letreiro que fica andando */
+.banner-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Dá um espacinho extra bem legal entre o texto e o ícone */
+}
+
+.topo-anuncio-icone {
+  width: 14px; /* Tamanho perfeito para não quebrar a altura da barra */
+  height: 14px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
