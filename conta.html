@@ -140,15 +140,12 @@
             if (elEmail && emailSalvo) elEmail.textContent = emailSalvo;
         });
 
-        // 2. FUNÇÃO DO BOTÃO SAIR
-       // 2. FUNÇÃO DO BOTÃO SAIR
-       // Procure por esta parte no final do script do seu conta.html e mude para:
         const botaoSairModal = document.getElementById('btn-logout-modal');
         if (botaoSairModal) {
         botaoSairModal.addEventListener('click', () => {
         // 1. Limpa ABSOLUTAMENTE TUDO que estiver salvo no navegador (nome, e-mail, tokens de login)
         localStorage.clear();
-        sessionStorage.clear(); // Por garantia, caso use sessionStorage também
+        sessionStorage.clear(); 
 
         // 2. Manda de volta para a página principal limpando o estado de login
         window.location.href = 'index.html?abrirLogin=true';
