@@ -21,7 +21,6 @@
             padding: 20px;
         }
 
-        /* Caixa principal baseada no checkout da Elis */
         .account-container {
             background-color: #ffffff;
             width: 100%;
@@ -31,7 +30,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
-        /* Título Principal */
         .title {
             font-size: 24px;
             color: #1e2d4a;
@@ -40,7 +38,6 @@
             font-weight: 600;
         }
 
-        /* Cabeçalho da Seção */
         .section-title {
             font-size: 12px;
             text-transform: uppercase;
@@ -53,7 +50,6 @@
             gap: 8px;
         }
 
-        /* Campos de Dados Formato Checkout */
         .data-field {
             margin-bottom: 15px;
         }
@@ -78,7 +74,6 @@
             min-height: 45px;
         }
 
-        /* Botão Sair Interno e Arredondado */
         .btn-logout {
             display: block;
             width: 100%;
@@ -128,7 +123,6 @@
     </div>
 
     <script>
-        // 1. CARREGAR OS DADOS DO USUÁRIO
         window.addEventListener('DOMContentLoaded', () => {
             const nomeSalvo = localStorage.getItem('usuarioNome');
             const emailSalvo = localStorage.getItem('usuarioEmail');
@@ -143,11 +137,8 @@
         const botaoSairModal = document.getElementById('btn-logout-modal');
         if (botaoSairModal) {
         botaoSairModal.addEventListener('click', () => {
-        // 1. Limpa ABSOLUTAMENTE TUDO que estiver salvo no navegador (nome, e-mail, tokens de login)
         localStorage.clear();
         sessionStorage.clear(); 
-
-        // 2. Manda de volta para a página principal limpando o estado de login
         window.location.href = 'index.html?abrirLogin=true';
     });
 }
