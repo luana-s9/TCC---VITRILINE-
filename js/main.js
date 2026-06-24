@@ -678,3 +678,28 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+function copiarPix() {
+  // Seleciona o campo de texto do Pix
+  var copyText = document.getElementById("pixCode");
+  
+  // Seleciona o conteúdo
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // Para celulares
+  
+  // Copia para a área de transferência do sistema
+  navigator.clipboard.writeText(copyText.value);
+  
+  // Alerta visual para o cliente saber que deu certo
+  alert("Código Pix copiado com sucesso! Agora é só colar no app do seu banco.");
+}
+
+function mostrarPix() {
+    // 1. Pega a caixinha do código Pix e faz ela aparecer
+    var areaPix = document.getElementById("area-pix");
+    areaPix.style.display = "block";
+    
+    // 2. Pega o botão do PIX e faz ele sumir
+    var botaoPix = document.getElementById("btn-pix-selecionar");
+    botaoPix.style.display = "none";
+}

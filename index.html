@@ -254,17 +254,28 @@
           Forma de Pagamento
         </h4>
         <div class="checkout-metodos">
-          <button class="metodo-btn selecionado" data-metodo="pix">
-            <img src="icons/icons8-foto-48.png" alt="Pix" class="checkout-icone">
-            PIX
-          </button>
-          <!-- <button class="metodo-btn" data-metodo="cartao">
-            <span class="metodo-icone">💳</span>Cartão
-          </button>
-          <button class="metodo-btn" data-metodo="dinheiro">
-            <span class="metodo-icone">💵</span>Dinheiro
-          </button> -->
+          <button id="btn-pix-selecionar" class="metodo-btn selecionado" data-metodo="pix" onclick="mostrarPix()">
+    <img src="icons/icons8-foto-48.png" alt="Pix" class="checkout-icone">
+    PIX
+</button>
+          <!-- <button class="metodo-btn selecionado" data-metodo="pix">
+    <img src="icons/icons8-foto-48.png" alt="Pix" class="checkout-icone">
+    PIX
+</button> -->
+
+<div id="area-pix" style="display: none; margin-top: 15px;">
+    <p style="font-size: 14px; color: #555; margin-bottom: 5px;">Copia e Cola:</p>
+    
+    <input type="text" readonly id="pixCode" value="00020126360014BR.GOV.BCB.PIX0114+55519999399415204000053039865802BR5924Elizangela Beatriz Ramos6012Porto Alegre62150511LOJAVIRTUAL630436A5" 
+           style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; background: #f9f9f9; font-size: 12px;">
+    
+    <button type="button" onclick="copiarPix()" 
+            style="margin-top: 8px; padding: 8px 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Copiar Código PIX
+    </button>
+</div>
         </div>
+        
         <!-- <div class="checkout-form" id="cartao-form" style="display:none; margin-top: 14px;">
           <input type="text" placeholder="Número do cartão" maxlength="19" />
           <div class="row-2">
