@@ -307,28 +307,6 @@ header {
 }
 .categoria-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.05em; }
 
-/* .categorias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 16px;
-}
-.categoria-card {
-  background: var(--cinza-claro);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  padding: 24px 16px;
-  text-align: center;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-.categoria-card:hover {
-  border-color: var(--laranja);
-  background: var(--amarelo);
-  transform: translateY(-3px);
-}
-.cat-icone { font-size: 2rem; margin-bottom: 8px; }
-.categoria-card h3 { font-size: 0.88rem; font-weight: 700; color: var(--azul); text-transform: uppercase; letter-spacing: 0.05em; } */
-
 /* PRODUTOS GRID */
 .produtos-grid {
   display: grid;
@@ -592,9 +570,6 @@ header {
 }
 .modal-fechar:hover { color: var(--azul); }
 
-/* ============================================
-   CARRINHO LATERAL (drawer)
-============================================ */
 .carrinho-overlay {
   display: none;
   position: fixed;
@@ -1156,10 +1131,11 @@ footer {
   .produto-img { height: 180px; }
   .btn-ver, .btn-add-cart {
       font-size: 0.65rem;       
-      padding: 6px 8px;        
-      letter-spacing: 0;      
+      padding: 6px 4px;        
+      letter-spacing: 0;
+      text-transform: capitalize;      
   }
-
+  
 }
 
 /* SOBRE - VALORES */
@@ -1230,23 +1206,23 @@ footer {
 .valor-item {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* Centraliza a imagem e os textos na horizontal */
-  text-align: center;       /* Garante o alinhamento central do texto */
+  align-items: center;     
+  text-align: center;       
 }
 
 .valor-icone-bloco {
-  width: 100%;             /* Ocupa a largura total para alinhar a imagem ao centro */
+  width: 100%;             
   display: flex;
-  justify-content: center; /* Centraliza a tag img horizontalmente */
+  justify-content: center;
   align-items: center;
-  margin-bottom: 12px;     /* Dá o espaço certinho para o título abaixo */
+  margin-bottom: 12px;    
 }
 
 .valores-icone {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  display: block;          /* Remove qualquer comportamento de texto da imagem */
+  display: block;         
 }
 
 /* Ícone de imagem dentro do botão do Instagram (Página Sobre) */
@@ -1271,10 +1247,6 @@ footer {
   height: 16px;
   object-fit: contain;
 }
-
-/* ==========================================================================
-   ATUALIZAÇÃO DE ÍCONES (VITRINE, MODAL E PÁGINA SOBRE)
-   ========================================================================== */
 
 /* Alinhamento dos botões de comprar no catálogo e no modal */
 .btn-add-cart,
@@ -1305,7 +1277,7 @@ footer {
 .produto-tamanho {
   display: flex;
   align-items: center;
-  gap: 4px; /* Espaço entre o ícone da régua e o número do tamanho */
+  gap: 4px; 
 }
 
 /* Centraliza tudo dentro do carrinho vazio (ícone e texto) */
@@ -1316,7 +1288,7 @@ footer {
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin: 30px 0; /* Dá um espaço legal dentro do modal */
+  margin: 30px 0; 
 }
 
 /* Garante que a caixinha do ícone também mude para o centro */
@@ -1331,18 +1303,18 @@ footer {
   width: 60px; 
   height: 60px;
   object-fit: contain;
-  margin-bottom: 15px; /* Empurra o texto um pouquinho para baixo */
+  margin-bottom: 15px;
 }
 
 /* Alinhamento dos novos ícones no letreiro que fica andando */
 .banner-track {
   display: inline-flex;
   align-items: center;
-  gap: 10px; /* Dá um espacinho extra bem legal entre o texto e o ícone */
+  gap: 10px; 
 }
 
 .topo-anuncio-icone {
-  width: 14px; /* Tamanho perfeito para não quebrar a altura da barra */
+  width: 14px; 
   height: 14px;
   object-fit: contain;
   display: inline-block;
