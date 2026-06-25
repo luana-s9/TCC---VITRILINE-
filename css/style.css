@@ -1130,7 +1130,7 @@ footer {
   .produtos-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
   .produto-img { height: 180px; }
   .btn-ver, .btn-add-cart {
-      font-size: 0.65rem;       
+      font-size: 0.5rem;       
       padding: 6px 4px;        
       letter-spacing: 0;
       text-transform: capitalize;      
