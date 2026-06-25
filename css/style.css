@@ -1131,7 +1131,7 @@ footer {
   .produto-img { height: 180px; }
   .btn-ver, .btn-add-cart {
       font-size: 0.5rem;       
-      padding: 6px 4px;        
+      padding: 6px 10px;        
       letter-spacing: 0;
       text-transform: capitalize;      
   }
