@@ -98,14 +98,21 @@ function salvarCarrinho() {
 function adicionarAoCarrinho(id) {
   const prod = produtos.find(p => p.id === id);
   if (!prod) return;
+
   const existente = carrinho.find(i => i.id === id);
+
+  // Se o produto já estiver no carrinho, não adiciona novamente
   if (existente) {
-    existente.qtd++;
-  } else {
-    carrinho.push({ ...prod, qtd: 1 });
+    mostrarToast("Esta peça já está no seu carrinho. Cada produto possui apenas 1 unidade.");
+    return;
   }
+
+  // Adiciona apenas uma unidade
+  carrinho.push({ ...prod, qtd: 1 });
+
   salvarCarrinho();
   atualizarBadgeCarrinho();
+  renderizarCarrinho(); // Atualiza o carrinho, caso esteja aberto
   mostrarToast(`✓ ${prod.nome} adicionado ao carrinho!`);
 }
 
